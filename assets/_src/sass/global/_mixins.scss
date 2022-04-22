@@ -1,1 +1,17 @@
 @use 'variables' as *;
+
+
+/* Breakpoint */
+$breakpoints-up: (
+	"sm": 576px,
+	"md": 768px,
+	"lg": 992px,
+	"xl": 1200px,
+	"xxl": 1400 
+);
+
+@mixin breakpoint($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}

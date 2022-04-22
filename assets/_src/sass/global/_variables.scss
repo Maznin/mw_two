@@ -1,8 +1,7 @@
 /* Colors */
-
 $primary: #008AEE;
 $gray: #666;
-$light-gray: #eee;
+$light-gray: #ddd;
 $white: #fff;
 $black: #000;
 $bg-gradient-blue: linear-gradient(120deg, #008aee, #008aee, #279bf1, #20b0f4, #18cef8);
@@ -10,7 +9,9 @@ $bg-gradient-blue: linear-gradient(120deg, #008aee, #008aee, #279bf1, #20b0f4, #
 /* Transition */
 $main-transition: 400ms ease;
 
-
 /* Fonts */
 $body-font: 'Raleway', sans-serif;
 $title-font: 'Alfa Slab One', cursive;
+
+/* Container width */
+$container-width: 1170px;

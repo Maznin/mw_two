@@ -12,7 +12,7 @@
 
 <header class="header">
 	<div class="header-top">
-		<div class="container d-flex">
+		<div class="container d-flex-lg-up">
 			<div class="header-top-col">
 				<a class="social-sm header-social" href="#">
 					<svg class="svg-icon-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310" >
@@ -25,14 +25,20 @@
 			</div>
 		</div>
 	</div>
-	<div class="header-bottom container d-flex">
+	<div class="header-bottom container d-flex-lg-up">
 		<div class="header-bottom-col header-bottom-col-left">
 			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<?php bloginfo( 'name' ); ?>
 			</a>
 		</div>
-		<div class="header-bottom-col header-bottom-col-right d-flex">
-			<nav class="main-nav">
+		<button class="mobile-toggler">
+			<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+				<path fill="none" d="M0 0h16v16H0z"/>
+				<path d="M1 9h14V7H1v2zm0 5h14v-2H1v2zM1 2v2h14V2H1z"/>
+			</svg>
+		</button>
+		<div class="header-bottom-col header-bottom-col-right d-flex-lg-up">
+			<nav role="navigation" class="main-nav">
 				<?php
 				wp_nav_menu( array( 
 					'theme_location' => 'mazniweb', 

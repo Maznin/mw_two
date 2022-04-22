@@ -45,7 +45,8 @@ ul {
 /* Reusable classes */
 .container {
 	margin: 0 auto;
-	max-width: 1170px;
+	max-width: $container-width;
+	padding: 0 15px;
 }
 
 .btn {
@@ -74,6 +75,16 @@ ul {
 
 .d-flex {
 	display: flex;
+}
+
+@include breakpoint(lg) {
+	.container {
+		padding: 0;
+	}
+
+	.d-flex-lg-up {
+		display: flex;
+	}
 }
 
 .social-sm {
