@@ -1,5 +1,67 @@
 @use '../global' as *;
 
 .header {
-	border-bottom: 1px solid $light-gray;
+	&-top > *,
+	&-bottom {
+		justify-content: space-between;
+	}
+
+	&-top {
+		background: $bg-gradient-blue;
+		color: $white;
+		padding: 10px 0;
+	}
+
+	&-social svg {
+		fill: $white;
+		opacity: 0.8;
+	}
+
+	&-social:hover .svg-icon-header {
+		opacity: 1;
+	}
+
+	&-num {
+		color: $white;
+		font-family: $title-font;
+	}
+
+	&-bottom {
+		padding: 35px 0;
+	}
+
+	&-bottom-col-right {
+		align-items: center;
+	}
+
+	.site-logo {
+		font-family: $title-font;
+		font-size: 2.5rem;
+		padding: 6px 0;
+	}
 }
+
+.main-nav {
+	margin-right: 80px;
+}
+
+.main-nav ul {
+	display: flex;
+	font-size: 1.4rem;
+
+	a {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	a:hover {
+		color: $primary;
+	}
+
+	li:not(:last-child) {
+		margin-right: 50px;
+	}
+}
+
+/* Header Media Queries */
+

@@ -1,6 +1,88 @@
 @use '../global' as *;
 
+/* Minimal Reset */
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Raleway:wght@400;500;600;700&display=swap');
+
+
+/* Global */
+html {
+	font-size: 62.5%;
+}
+
+
 body {
-	border: 1px solid rgb(55, 0, 255);
-	font-family: sans-serif; 
+	color: $gray;
+	font-family: $body-font;
+	font-size: 1.6rem;
+}
+
+h1, h2 ,h3 {
+	color: $black;
+	font-family: $title-font;
+}
+
+p {
+	font-size: 1.6rem;
+}
+
+a {
+	color: $black;
+	text-decoration: none;
+	transition: color 400ms ease;
+}
+
+ul {
+	list-style: none;
+}
+
+/* Reusable classes */
+.container {
+	margin: 0 auto;
+	max-width: 1170px;
+}
+
+.btn {
+	border: 1px solid $primary;
+	font-size: 1.4rem;
+	font-weight: 700;
+	padding: 13px 35px;
+	text-transform: uppercase;
+	transition: all 400ms ease;
+}
+
+.btn:hover {
+	background: transparent;
+	color: $primary;
+}
+
+.btn-primary {
+	background-color: $primary;
+	color: $white;
+}
+
+.btn-secondary {
+	border: 1px solid $primary;
+	color: $primary;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.social-sm {
+	display: inline-block;
+	font-size: 6px;
+	padding: 3px 0;
+	
+	svg {
+		transition: opacity $main-transition;
+		width: 15px;
+	}
 }

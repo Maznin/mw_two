@@ -3,7 +3,7 @@
  * Set up theme defaults and registers support for various WordPress feaures.
  */
 add_action( 'after_setup_theme', function() {
-	load_theme_textdomain( 'bathe', get_theme_file_uri( 'languages' ) );
+	load_theme_textdomain( 'mazniweb', get_theme_file_uri( 'languages' ) );
 
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
@@ -22,7 +22,7 @@ add_action( 'after_setup_theme', function() {
 		'quote',
 		'link',
 	) );
-	add_theme_support( 'custom-background', apply_filters( 'bathe_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'mazniweb_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', function() {
 	) );
 
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'bathe' ),
+		'primary' => __( 'Primary Menu', 'mazniweb' ),
 	) );
 } );
 
@@ -55,7 +55,7 @@ add_action( 'after_setup_theme', function() {
  * @global int $content_width
  */
 add_action( 'after_setup_theme', function() {
-	$GLOBALS['content_width'] = apply_filters( 'bathe_content_width', 960 );
+	$GLOBALS['content_width'] = apply_filters( 'mazniweb_content_width', 960 );
 }, 0 );
 
 /**
@@ -63,7 +63,7 @@ add_action( 'after_setup_theme', function() {
  */
 add_action( 'widgets_init', function() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'bathe' ),
+		'name'          => __( 'Sidebar', 'mazniweb' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -78,11 +78,11 @@ add_action( 'widgets_init', function() {
  */
 add_action( 'wp_enqueue_scripts', function() {
 
-	wp_enqueue_style( 'bathe-main', get_theme_file_uri( 'assets/css/main.css' ) );
-	wp_enqueue_style( 'tailwind', get_theme_file_uri( 'assets/css/tailwind.css' ) );
+	wp_enqueue_style( 'mazniweb-main', get_theme_file_uri( 'assets/css/main.css' ) );
+	// wp_enqueue_style( 'tailwind', get_theme_file_uri( 'assets/css/tailwind.css' ) );
 
 
-	wp_enqueue_script( 'bathe-bundle', get_theme_file_uri( 'assets/js/main.js' ), array(), null, true );
+	wp_enqueue_script( 'mazniweb-bundle', get_theme_file_uri( 'assets/js/main.js' ), array(), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
