@@ -1,0 +1,88 @@
+@use '../../global/' as *;
+
+.hero {
+	background: $bg-gradient-blue;
+	color: $white;
+	padding: 55px 0;
+
+	&-content {
+		text-align: center;
+	}
+
+	h1,
+	a {
+		color: inherit;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-size: 1.7rem;
+		line-height: 1.4;
+		margin-bottom: 30px;
+	}
+
+	a {
+		border: 1px solid $white;
+	}
+
+	img { 
+		display: none;
+	}
+}
+
+@include breakpoint(md) {
+	.hero {
+		padding: 90px 0;
+
+		&-content {
+			justify-content: space-between;
+			text-align: left;
+		}
+
+		&-content-left {
+			max-width: 585px;
+			padding-right: 15px;
+		}
+
+		&-content-right {
+			align-self: center;
+			flex-shrink: 0;
+			width: 40%;
+		}
+
+		img { 
+			display: block;
+			flex-shrink: 0;
+		}
+
+		h1 {
+			font-size: 5.5rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+	}
+}
+
+@include breakpoint(lg) {
+	.hero {
+		padding: 110px 0;
+
+		h1 {
+			font-size: 9rem;
+		}
+    
+		p {
+			font-size: 2.2rem;
+		}
+
+		a {
+			font-size: 1.6rem;
+		}
+	}
+}

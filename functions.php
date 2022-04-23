@@ -88,3 +88,25 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 } );
+
+/**
+ * ACF Blocks
+ */
+add_action('acf/init', 'mazniweb_block_types');
+function mazniweb_block_types() {
+
+    // Check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+        // register a hero block.
+        acf_register_block_type(array(
+            'name'              => 'hero',
+            'title'             => __('Hero Section'),
+            'description'       => __('A custom hero block.'),
+            'render_template'   => 'template-parts/blocks/hero/hero-block.php',
+            'category'          => 'widget',
+            'icon'              => 'format-gallery',
+            'keywords'          => array( 'hero', 'header' ),
+        ));
+    }
+}
