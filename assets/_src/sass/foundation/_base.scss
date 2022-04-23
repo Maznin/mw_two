@@ -42,6 +42,10 @@ ul {
 	list-style: none;
 }
 
+button {
+	background-color: transparent;
+}
+
 /* Reusable classes */
 .container {
 	margin: 0 auto;
@@ -77,6 +81,10 @@ ul {
 	display: flex;
 }
 
+.justify-between {
+	justify-content: space-between;
+}
+
 @include breakpoint(lg) {
 	.container {
 		padding: 0;
@@ -84,6 +92,12 @@ ul {
 
 	.d-flex-lg-up {
 		display: flex;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	.container {
+		padding: 0 15px;
 	}
 }
 
