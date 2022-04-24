@@ -12,7 +12,7 @@ $image = get_field('image');
             <a class="btn" href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a>
         </div>
         <div class="hero-content-right">
-            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
+            <img class="hero-content-img" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
         </div>
     </div>
 </section>

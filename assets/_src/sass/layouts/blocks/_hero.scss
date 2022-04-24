@@ -9,6 +9,10 @@
 		text-align: center;
 	}
 
+	&-content-img {
+		display: none;
+	}
+
 	h1,
 	a {
 		color: inherit;
@@ -28,15 +32,12 @@
 	a {
 		border: 1px solid $white;
 	}
-
-	img { 
-		display: none;
-	}
 }
 
 @include breakpoint(md) {
 	.hero {
 		padding: 90px 0;
+		position: relative;
 
 		&-content {
 			justify-content: space-between;
@@ -45,7 +46,9 @@
 
 		&-content-left {
 			max-width: 585px;
-			padding-right: 15px;
+			padding-right: 15px;	
+			position: relative;
+			z-index: 2;
 		}
 
 		&-content-right {
@@ -54,9 +57,14 @@
 			width: 40%;
 		}
 
-		img { 
+		&-content-img {
 			display: block;
-			flex-shrink: 0;
+			position: absolute;
+			right: 15px;
+			top: 60%;
+			transform: translateY(-50%);
+			width: 45%;
+			z-index: 1;
 		}
 
 		h1 {
