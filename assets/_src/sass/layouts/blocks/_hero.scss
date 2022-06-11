@@ -68,11 +68,23 @@
 		}
 
 		h1 {
+			animation: flipIn 600ms ease-in-out;
 			font-size: 5.5rem;
+			transform-origin: 50% 50%;
 		}
 
 		p {
 			font-size: 2rem;
+		}
+
+		@keyframes flipIn {
+			0% {
+				transform: perspective(600px) translate3d(0,-46px,-32px) rotateX(80deg);
+			}
+
+			100% {
+				transform: perspective(600px) translate3d(0,0,0) rotateX(0);
+			}
 		}
 	}
 }

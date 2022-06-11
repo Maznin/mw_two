@@ -89,6 +89,18 @@ add_action( 'wp_enqueue_scripts', function() {
 	}
 } );
 
+
+/**
+ * Add backend styles for Gutenberg.
+ */
+// 
+add_action('enqueue_block_editor_assets', 'gutenberg_editor_assets');
+
+function gutenberg_editor_assets() {
+  // Load the theme styles within Gutenberg.
+  wp_enqueue_style('mw-gutenberg-editor-styles', get_theme_file_uri('assets/css/gutenberg-editor-styles.css'), FALSE);
+}
+
 /**
  * ACF Blocks
  */
@@ -107,6 +119,17 @@ function mazniweb_block_types() {
             'category'          => 'widget',
             'icon'              => 'format-gallery',
             'keywords'          => array( 'hero', 'header' ),
+        ));
+
+		 // register two columns (text and grid).
+		 acf_register_block_type(array(
+            'name'              => 'two-columns-grid',
+            'title'             => __('Two columns (with grid)'),
+            'description'       => __('A custom two columns block with text and grid'),
+            'render_template'   => 'template-parts/blocks/hero/two-columns-grid-block.php',
+            'category'          => 'widget',
+            'icon'              => 'format-gallery',
+            'keywords'          => array( 'two-columns', 'grid' ),
         ));
     }
 }

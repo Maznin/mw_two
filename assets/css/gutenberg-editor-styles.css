@@ -1,0 +1,5 @@
+/* Gutenberg Style Overrides */
+html :where(.wp-block) {
+    max-width: unset;
+}
+/*# sourceMappingURL=gutenberg-editor-styles.css.map */

@@ -1,0 +1,1 @@
+{"version":3,"sources":["gutenberg-editor-styles.css"],"names":[],"mappings":"AAAA,8BAA8B;AAC9B;IACI,gBAAgB;AACpB","file":"gutenberg-editor-styles.css","sourcesContent":["/* Gutenberg Style Overrides */\r\nhtml :where(.wp-block) {\r\n    max-width: unset;\r\n}"]}
