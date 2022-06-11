@@ -1,0 +1,44 @@
+@use '../../global/' as *;
+
+.cta-contact {
+	background: $light-gray3;
+	padding-bottom: 80px;
+	padding-top: 70px;
+	text-align: center;
+
+	@include breakpoint(lg) {
+		text-align: left;
+
+		.col-2-left {
+			width: 70%;
+		}
+
+		img {
+			margin-top: -100px;
+			max-width: 385px;
+		}
+	}
+
+	.col-2-right {
+		padding-top: 80px;
+
+		@include breakpoint(lg) {
+			padding-top: 0;
+			text-align: right;
+		}
+	}
+
+	h2 {
+		font-size: 2.8rem;
+
+		@include breakpoint(lg) {
+			font-size: 4.5rem;
+		}
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+
+	
+}

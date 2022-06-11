@@ -126,10 +126,21 @@ function mazniweb_block_types() {
             'name'              => 'two-columns-grid',
             'title'             => __('Two columns (with grid)'),
             'description'       => __('A custom two columns block with text and grid'),
-            'render_template'   => 'template-parts/blocks/hero/two-columns-grid-block.php',
+            'render_template'   => 'template-parts/blocks/two-columns-grid-block.php',
             'category'          => 'widget',
             'icon'              => 'format-gallery',
             'keywords'          => array( 'two-columns', 'grid' ),
+        ));
+
+		 // register Contact CTA section.
+		 acf_register_block_type(array(
+            'name'              => 'contact-cta',
+            'title'             => __('Contact Us CTA'),
+            'description'       => __('CTA contact us section with button'),
+            'render_template'   => 'template-parts/blocks/cta-contact-block.php',
+            'category'          => 'widget',
+            'icon'              => 'phone',
+            'keywords'          => array( 'cta', 'contact' ),
         ));
     }
 }
