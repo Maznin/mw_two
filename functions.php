@@ -142,5 +142,17 @@ function mazniweb_block_types() {
             'icon'              => 'phone',
             'keywords'          => array( 'cta', 'contact' ),
         ));
+
+		
+		 // register Planning section.
+		 acf_register_block_type(array(
+            'name'              => 'planning',
+            'title'             => __('Planning'),
+            'description'       => __('Project Planning Section'),
+            'render_template'   => 'template-parts/blocks/planning-block.php',
+            'category'          => 'widget',
+            'icon'              => 'format-aside',
+            'keywords'          => array( 'planning', 'project' ),
+        ));
     }
 }

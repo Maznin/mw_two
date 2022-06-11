@@ -1,0 +1,79 @@
+@use '../../global/' as *;
+
+.planning {
+	.planning-top {
+		margin-bottom: 40px;
+		@include breakpoint(md) {
+			margin-bottom: 70px;
+		}
+
+		@include breakpoint(lg) {
+			.letter-bg {
+				left: 155px;
+				top: -209px;
+			}
+		}
+	}
+
+	.planning-top p {
+		margin: 0 auto;
+		max-width: 540px;
+	}
+
+	h3 {
+		margin-bottom: 8px;
+	}
+
+	.counter-bg {
+		color: $blue-transparent2;
+		font-size: 10rem;
+		font-weight: 700;
+		position: absolute;
+		right: 0;
+		text-align: right;
+		top: -20px;
+	}
+
+}
+
+.planning-list {
+
+	@include breakpoint(md) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+    
+	&-item {
+		margin-bottom: 30px;
+		@include breakpoint(md) {
+			margin-bottom: 75px;
+			width: 26%;
+		}
+	}
+
+	&-item:not(:nth-child(3n)) {
+		@include breakpoint(md) {
+			margin-right: 11%;
+		}
+	}
+
+	&-item:last-child {
+		@include breakpoint(md) {
+			margin-right: 0;
+		}
+	}
+
+	&-item::after {
+		background: $light-gray2;
+		content: "";
+		display: block;
+		height: 1px;
+		margin: 10px auto 0;
+		width: 98px;
+
+		@include breakpoint(md) {
+			margin: 10px 0 0;
+		}
+	}
+}

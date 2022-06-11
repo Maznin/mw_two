@@ -9,13 +9,14 @@ $image = get_field('image');
     <?php while( have_rows('two_columns_text_and_grid') ): the_row(); ?>
         <?php if( get_row_layout() == 'two_columns' ): 
             $btn = get_sub_field('button');
+            $title = get_sub_field('title');
             ?>
             <section class="col-2 p-y-1 <?php the_sub_field('section_custom_class'); ?>">
                 <div class="container d-flex-lg-up">
                     <div class="col-2-left-w1 pr m-b-1">
-                        <span class="letter-bg">W</span>
+                        <span class="letter-bg"><?php echo substr($title, 0, 1); ?></span>
                         <h2 class="pr d-inline-b">
-                            <?php the_sub_field('title'); ?>
+                            <?php echo $title; ?>
                             <span class="dots"></span>
                         </h2>
                         <p class="m-b-1"><?php the_sub_field('text'); ?></p>
